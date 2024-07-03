@@ -1,57 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-[#ffff]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header with Back Button and Hamburger Menu</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .hamburger {
+        transition: all 0.3s ease;
+      }
 
-  <!-- Header -->
-  <header>
-    <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
-        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-            <a href="https://flowbite.com" class="flex items-center">
-                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-            </a>
-            <div class="flex items-center lg:order-2">
-                <button id="menu-button" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <svg id="menu-icon" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-                    <svg id="close-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </button>
-            </div>
-            <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
-                <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-                    <li>
-                        <a href="#" class=" py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-  </header>
+      .hamburger.open .line-1 {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
 
-  <script>
-    document.getElementById('menu-button').addEventListener('click', function() {
-      const menu = document.getElementById('mobile-menu-2');
-      const menuIcon = document.getElementById('menu-icon');
-      const closeIcon = document.getElementById('close-icon');
+      .hamburger.open .line-2 {
+        opacity: 0;
+      }
+
+      .hamburger.open .line-3 {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#ffff]">
+    <header class="bg-white shadow-md  flex justify-between items-center mx-auto md:px-24 px-5 py-5">
+      <button
+        class="text-gray-600 focus:outline-none flex font-bold items-center gap-x-2"
+        onclick="navigateBack()"
+      >
+        <svg
+          width="24"
+          height="24"
+          xmlns="http://www.w3.org/2000/svg"
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+        >
+          <path
+            d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z"
+          />
+        </svg>
+      </button>
+
+      <div class="relative">
+        <button id="hamburgerBtn" class="hamburger focus:outline-none">
+          <span class="block w-8 h-1 bg-black mb-1.5 line-1"></span>
+          <span class="block w-8 h-1 bg-black mb-1.5 line-2"></span>
+          <span class="block w-8 h-1 bg-black line-3"></span>
+        </button>
+        <nav
+        id="navMenu"
+        class="absolute right-0 mt-2 bg-white shadow-lg rounded-lg  hidden z-20"
+      >
+        <ul class="space-y-1 w-96">
+          <li>
+            <a 
+            onclick="navigateNext1()"
+              href="#"
+              class="block text-center text-gray-700 hover:text-gray-900 text-2xl font-bold  hover:underline p-4"
+              >Age 2-2.5 years</a
+            >
+          </li>
+          <li>
+            <a
+            onclick="navigateNext2()"
+              href="#"
+              class="block text-center text-gray-700 hover:text-gray-900 text-2xl font-bold my-0 hover:underline p-4"
+              >LEARN IT</a
+            >
+          </li>
+          <li>
+            <a
+            onclick="navigateNext3()"
+              href="#"
+              class="block text-center text-gray-700 hover:text-gray-900 text-2xl font-bold my-0 hover:underline p-4"
+              >TRACE IT</a
+            >
+          </li>
+         
+          <li>
+            <a
+            onclick="navigateNext4()"
+              href="#"
+              class="block text-center text-gray-700 hover:text-gray-900 text-2xl font-bold my-0 hover:underline p-4"
+              >Age 2.5-3.5 years</a
+            >
+          </li>
+         
+          <li>
+            <a
+            onclick="navigateNext5()"
+              href="#"
+              class="block text-center text-gray-700 hover:text-gray-900 text-2xl font-bold my-0 hover:underline p-4"
+              >VOWELS</a
+            >
+          </li>
+         
+          <li>
+            <a
+            onclick="navigateNext6()"
+              href="#"
+              class="block text-center text-gray-700 hover:text-gray-900 text-2xl font-bold my-0 hover:underline p-4"
+              >SAY IT</a
+            >
+          </li>
+         
+          <li>
+            <a
+            onclick="navigateNext7()"
+              href="#"
+              class="block text-center text-gray-700 hover:text-gray-900 text-2xl font-bold my-0 hover:underline p-4"
+              >TRACE IT 2</a
+            >
+          </li>
+         
+          <li>
+            <a
+            onclick="navigateNext8()"
+              href="#"
+              class="block text-center text-gray-700 hover:text-gray-900 text-2xl font-bold my-0 hover:underline p-4"
+              >Age 3.5-4.5 years</a
+            >
+          </li>
+          <li>
+            <a
+            onclick="navigateNext9()"
+              href="#"H
+              class="block text-center text-gray-700 hover:text-gray-900 text-2xl font-bold my-0 hover:underline p-4"
+              >Learn It 2</a
+            >
+          </li>
+          <li>
+            <a
+            onclick="navigateNext10()"
+              href="#"
+              class="block text-center text-gray-700 hover:text-gray-900 text-2xl font-bold my-0 hover:underline p-4"
+              >Vocabs</a
+            >
+          </li>
+         
+        </ul>
+      </nav>
       
-      menu.classList.toggle('hidden');
-      menu.classList.toggle('lg:flex');
-      menuIcon.classList.toggle('hidden');
-      closeIcon.classList.toggle('hidden');
-    });
-  </script>
-  
-  <script>
-    function navigateBack() {
-        window.location.href = 'storecoin.html';
-    }
-  </script>
+      </div>
+    </header>
 
-</body>
+    <div class="max-w-screen-md mx-auto relative ">
+      <div class="absolute top-[50%] left-0 right-0 flex justify-center mt-4">
+        <h1
+          class="text-black md:text-7xl text-4xl font-extrabold text-center tracking-wider p-2 rounded-md md:mt-96 mt-40"
+        >
+          LEARN <br />
+          ALPHABETS
+        </h1>
+      </div>
+      <img
+        src="public/image 48.png"
+        alt=""
+        class="h-[700px] w-full "
+      />
+    </div>
+
+    <script src="script/Learnalpha.js"></script>
+  </body>
 </html>
