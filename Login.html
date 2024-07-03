@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/tailwind.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+      <div
+        class="container mx-auto px-4 py-5 flex justify-between items-center"
+      >
+        <button
+          class="text-gray-600 focus:outline-none flex font-bold items-center gap-x-2"
+          onclick="navigateBack()"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto mt-8 px-4">
+      <div class="max-w-screen-md mx-auto p-6 rounded">
+        <h1 class="text-3xl mb-12 font-bold">Login</h1>
+        <form>
+          <div class="mb-4">
+            <label for="username" class="block text-md font-bold text-gray-700"
+              >UserName</label
+            >
+            <input
+              type="text"
+              id="username"
+              name="username"
+              class="mt-1 block w-full px-3 py-2 bg-gray-200 rounded-full shadow-sm focus:outline-none focus:border-blue-500 focus:ring-blue-500"
+              required
+            />
+          </div>
+
+          <div class="mb-4">
+            <label for="password" class="block text-md font-bold text-gray-700"
+              >Password</label
+            >
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="mt-1 block w-full px-3 py-2 bg-gray-200 rounded-full shadow-sm focus:outline-none focus:border-blue-500 focus:ring-blue-500"
+              required
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="mt-5 block mx-auto py-2 w-[150px] border border-transparent text-lg font-bold rounded-full text-black bg-[#FFD18B] hover:bg-[#FFD183]"
+          >
+            Login
+          </button>
+        </form>
+      </div>
+    </main>
+
+    <script>
+      function navigateBack() {
+        window.location.href = "Welcome.html";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/tailwind.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <main class="bg-[#FFFFFF]">
+      <div class="max-w-screen-md mx-auto relative">
+        <img
+          src="public/3.png"
+          alt="Image 3"
+          class="absolute top-0 left-0 w-[100%] h-screen max-w-screen-md max-height-[800px]"
+        />
+        <img
+          src="public/2.png"
+          alt="Image 2"
+          class="absolute top-0 left-0 w-[100%] h-screen max-w-screen-md max-height-[800px]"
+        />
+        <img
+          src="public/1.png"
+          alt="Image 1"
+          class="absolute top-0 left-0 w-[100%] h-screen max-w-screen-md max-height-[800px]"
+        />
+
+        <img
+          src="public/hero.png"
+          alt="Centered Image"
+          class="absolute inset-0 md:mt-24 mt-28 mx-auto md:h-[260px] h-[350px] md:w-[500px] w-[300px]"
+        />
+
+        <div class="md:pt-96 pt-[470px]">
+          <h1 class="text-3xl mb-5 font-bold text-center">Kinder Quest</h1>
+          <button
+            type="submit"
+            class="mt-5 block mx-auto py-2 w-[150px] border border-transparent text-lg font-bold rounded-full text-black bg-[#FFD18B] hover:bg-[#FFD183]"
+            onclick="navigateToLogin()"
+          >
+            Login
+          </button>
+          <button
+            class="mt-5 block mx-auto py-2 w-[150px] border border-blue-400 text-lg font-bold rounded-full text-black bg-[#FFFF] hover:bg-[#FFD183]"
+            onclick="navigateNext()"
+          >
+            Register
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      function navigateNext() {
+        window.location.href = "StudentResgister.html"; // Change the URL to your actual page path
+      }
+    </script>
+    <script>
+      function navigateToLogin() {
+        window.location.href = "Login.html"; // Change the URL to your actual page path
+      }
+    </script>
+  </body>
+</html>

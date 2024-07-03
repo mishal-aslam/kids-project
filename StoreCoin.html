@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../styles/tailwind.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-5 flex justify-between items-center">
+      <button class="text-black uppercase text-center mx-auto flex font-bold items-center text-5xl font-extrabold gap-x-2" onclick="navigateBack()">
+        CATEGORY
+      </button>
+    </div>
+  </header>
+
+  <div class="max-w-screen-md mx-auto relative md:h-[100vh]">
+
+    <!-- Image with Absolute Positioned Text -->
+    <div class="relative">
+      <img src="public/StoreCoin.png" alt="StoreCoin Image" class="w-full">
+      <button class="text-black uppercase text-center absolute inset-0 flex m justify-end px-12 font-bold md:text-5xl font-extrabold md:mt-24 mt-12 text-3xl" onclick="navigateLearnAlpha()" >
+        Alphabet
+      </button>
+      <button class="text-black uppercase text-center absolute inset-0 flex  justify-end px-12 font-bold md:text-5xl font-extrabold md:mt-[265px] mt-32 text-3xl  ">
+        maths
+      </button>
+      <button class="text-black uppercase text-center absolute inset-0 flex  justify-end px-12 font-bold md:text-5xl font-extrabold md:mt-[265px] text-3xl md:mt-[430px] mt-52   ">
+        shapes
+      </button>
+      <button class="text-black uppercase text-center absolute inset-0 flex  justify-end px-12 font-bold md:text-5xl font-extrabold md:mt-[265px] md:mt-[610px] mt-[294px] text-3xl  ">
+        colors
+      </button>
+      <button class="text-black uppercase text-center absolute inset-0 flex  justify-end px-12 font-bold md:text-5xl font-extrabold md:mt-[265px] md:mt-[770px] mt-[380px] text-3xl  ">
+        body parts
+      </button>
+      <button class="text-black uppercase text-center absolute inset-0 flex  justify-end px-12 font-bold md:text-5xl font-extrabold md:mt-[265px] md:mt-[940px] mt-[465px] text-3xl  ">
+        vegetables
+      </button>
+      <button class="text-black uppercase text-center absolute inset-0 flex  justify-end px-12 font-bold md:text-5xl font-extrabold md:mt-[265px] md:mt-[999px] py-28 mt-[545px] text-3xl  ">
+        fruits
+      </button>
+    </div>
+
+  </div>
+
+  <script>
+    function navigateLearnAlpha() {
+        window.location.href = 'LearnAlpha.html';
+    }
+  </script>
+</body>
+
+</html>

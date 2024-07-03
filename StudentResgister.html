@@ -12,7 +12,7 @@
   <!-- Header -->
   <header class="bg-white shadow-md">
     <div class="container mx-auto px-4 py-5 flex justify-between items-center">
-      <button class="text-gray-600 focus:outline-none flex font-bold items-center gap-x-2">
+      <button class="text-gray-600 focus:outline-none flex font-bold items-center gap-x-2" onclick="navigateBack()">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
         </svg>
@@ -22,9 +22,9 @@
 
   <!-- Main Content -->
   <main class="container mx-auto mt-8 px-4">
-    <h1 class="text-3xl mb-12 font-bold">Register</h1>
-
+    
     <div class="max-w-screen-md mx-auto p-6 rounded">
+      <h1 class="text-3xl mb-12 font-bold">Register</h1>
       <form>
 
         <div class="mb-4">
@@ -35,12 +35,18 @@
         <div class="grid grid-cols-2 gap-x-12 mb-4">
           <div class="mb-4">
             <label for="age" class="block text-md font-bold text-gray-700">Age</label>
-            <input type="text" id="age" name="age" class="mt-1 block w-full px-3 py-2 bg-gray-200 rounded-full shadow-sm focus:outline-none focus:border-blue-500 focus:ring-blue-500" required>
+            <input type="date" id="age" name="age" class="mt-1 block w-full px-3 py-2 bg-gray-200 rounded-full shadow-sm focus:outline-none focus:border-blue-500 focus:ring-blue-500" required>
           </div>
+          
           <div class="mb-4">
             <label for="gender" class="block text-md font-bold text-gray-700">Gender</label>
-            <input type="text" id="gender" name="gender" class="mt-1 block w-full px-3 py-2 bg-gray-200 rounded-full shadow-sm focus:outline-none focus:border-blue-500 focus:ring-blue-500" required>
+            <select id="gender" name="gender" class="mt-1 block w-full px-3 py-2 bg-gray-200 rounded-full shadow-sm focus:outline-none focus:border-blue-500 focus:ring-blue-500" required>
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+              <option value="other">Other</option>
+            </select>
           </div>
+          
         </div>
 
         <div class="mb-4">
@@ -64,12 +70,18 @@
         </div>
 
         
-        <button type="submit" class="mt-5 block mx-auto py-2 px-4 border border-transparent text-md font-semibold rounded-full text-black bg-[#FFD18B] hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <button type="submit" class="mt-5 block mx-auto py-2 w-[150px] border border-transparent text-lg font-bold rounded-full text-black bg-[#FFD18B] hover:bg-[#FFD183]">
           Register
         </button>
       </form>
     </div>
   </main>
+
+  <script>
+    function navigateBack() {
+      window.location.href = 'Welcome.html';
+    }
+  </script>
 
 </body>
 </html>
