@@ -28,7 +28,9 @@
   </head>
 
   <body class="bg-[#ffff]">
-    <header class="bg-white shadow-md  flex justify-between items-center mx-auto md:px-24 px-5 py-5">
+    <header
+      class="bg-white shadow-md flex justify-between items-center mx-auto md:px-24 px-5 py-5"
+    >
       <button
         class="text-gray-600 focus:outline-none flex font-bold items-center gap-x-2"
         onclick="navigateBack()"
@@ -53,103 +55,113 @@
           <span class="block w-8 h-1 bg-black line-3"></span>
         </button>
         <nav
-        id="navMenu"
-        class="absolute right-0 mt-2 bg-white shadow-lg rounded-lg  hidden z-20"
-      >
-        <ul class="space-y-1 w-96">
-          <li>
-            <a 
-            onclick="navigateNext1()"
-              href="#"
-              class="block text-center text-gray-700 hover:text-gray-900 text-2xl font-bold  hover:underline p-4"
-              >Age 2-2.5 years</a
-            >
-          </li>
-          <li>
-            <a
-            onclick="navigateNext2()"
-              href="#"
-              class="block text-center text-gray-700 hover:text-gray-900 text-2xl font-bold my-0 hover:underline p-4"
-              >LEARN IT</a
-            >
-          </li>
-          <li>
-            <a
-            onclick="navigateNext3()"
-              href="#"
-              class="block text-center text-gray-700 hover:text-gray-900 text-2xl font-bold my-0 hover:underline p-4"
-              >TRACE IT</a
-            >
-          </li>
-         
-          <li>
-            <a
-            onclick="navigateNext4()"
-              href="#"
-              class="block text-center text-gray-700 hover:text-gray-900 text-2xl font-bold my-0 hover:underline p-4"
-              >Age 2.5-3.5 years</a
-            >
-          </li>
-         
-          <li>
-            <a
-            onclick="navigateNext5()"
-              href="#"
-              class="block text-center text-gray-700 hover:text-gray-900 text-2xl font-bold my-0 hover:underline p-4"
-              >VOWELS</a
-            >
-          </li>
-         
-          <li>
-            <a
-            onclick="navigateNext6()"
-              href="#"
-              class="block text-center text-gray-700 hover:text-gray-900 text-2xl font-bold my-0 hover:underline p-4"
-              >SAY IT</a
-            >
-          </li>
-         
-          <li>
-            <a
-            onclick="navigateNext7()"
-              href="#"
-              class="block text-center text-gray-700 hover:text-gray-900 text-2xl font-bold my-0 hover:underline p-4"
-              >TRACE IT 2</a
-            >
-          </li>
-         
-          <li>
-            <a
-            onclick="navigateNext8()"
-              href="#"
-              class="block text-center text-gray-700 hover:text-gray-900 text-2xl font-bold my-0 hover:underline p-4"
-              >Age 3.5-4.5 years</a
-            >
-          </li>
-          <li>
-            <a
-            onclick="navigateNext9()"
-              href="#"H
-              class="block text-center text-gray-700 hover:text-gray-900 text-2xl font-bold my-0 hover:underline p-4"
-              >Learn It 2</a
-            >
-          </li>
-          <li>
-            <a
-            onclick="navigateNext10()"
-              href="#"
-              class="block text-center text-gray-700 hover:text-gray-900 text-2xl font-bold my-0 hover:underline p-4"
-              >Vocabs</a
-            >
-          </li>
-         
-        </ul>
-      </nav>
-      
+          id="navMenu"
+          class="absolute right-0 mt-2 bg-white shadow-lg rounded-lg hidden z-20"
+        >
+          <ul
+            class="space-y-1 w-96 text-start bg-blue-300 pl-8 p-4 rounded-lg shadow-lg"
+          >
+            <li>
+              <a
+                onclick="navigateNext1()"
+                href="#"
+                class="block hover:text-gray-900 text-2xl font-bold p-4 text-white rounded hover:bg-blue-100 transition duration-300 ease-in-out"
+                >Age 2-2.5 years</a
+              >
+              <hr />
+            </li>
+            <li>
+              <a
+                onclick="navigateNext2()"
+                href="#"
+                class="block hover:text-gray-900 text-2xl font-bold p-4 text-white rounded hover:bg-blue-100 transition duration-300 ease-in-out"
+                >LEARN IT</a
+              >
+              <hr />
+            </li>
+            <li>
+              <a
+                onclick="navigateNext3()"
+                href="#"
+                class="block hover:text-gray-900 text-2xl font-bold p-4 text-white rounded hover:bg-blue-100 transition duration-300 ease-in-out"
+                >TRACE IT</a
+              >
+              <hr />
+            </li>
+
+            <li>
+              <a
+                onclick="navigateNext4()"
+                href="#"
+                class="block hover:text-gray-900 text-2xl font-bold p-4 text-white rounded hover:bg-blue-100 transition duration-300 ease-in-out"
+                >Age 2.5-3.5 years</a
+              >
+              <hr />
+            </li>
+
+            <li>
+              <a
+                onclick="navigateNext5()"
+                href="#"
+                class="block hover:text-gray-900 text-2xl font-bold p-4 text-white rounded hover:bg-blue-100 transition duration-300 ease-in-out"
+                >VOWELS</a
+              >
+              <hr />
+            </li>
+
+            <li>
+              <a
+                onclick="navigateNext6()"
+                href="#"
+                class="block hover:text-gray-900 text-2xl font-bold p-4 text-white rounded hover:bg-blue-100 transition duration-300 ease-in-out"
+                >SAY IT</a
+              >
+              <hr />
+            </li>
+
+            <li>
+              <a
+                onclick="navigateNext7()"
+                href="#"
+                class="block hover:text-gray-900 text-2xl font-bold p-4 text-white rounded hover:bg-blue-100 transition duration-300 ease-in-out"
+                >TRACE IT 2</a
+              >
+              <hr />
+            </li>
+
+            <li>
+              <a
+                onclick="navigateNext8()"
+                href="#"
+                class="block hover:text-gray-900 text-2xl font-bold p-4 text-white rounded hover:bg-blue-100 transition duration-300 ease-in-out"
+                >Age 3.5-4.5 years</a
+              >
+              <hr />
+            </li>
+            <li>
+              <a
+                onclick="navigateNext9()"
+                href="#"
+                H
+                class="block hover:text-gray-900 text-2xl font-bold p-4 text-white rounded hover:bg-blue-100 transition duration-300 ease-in-out"
+                >Learn It 2</a
+              >
+              <hr />
+            </li>
+            <li>
+              <a
+                onclick="navigateNext10()"
+                href="#"
+                class="block hover:text-gray-900 text-2xl font-bold p-4 text-white rounded hover:bg-blue-100 transition duration-300 ease-in-out"
+                >Vocabs</a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
 
-    <div class="max-w-screen-md mx-auto relative ">
+    <div class="max-w-screen-md mx-auto relative">
       <div class="absolute top-[50%] left-0 right-0 flex justify-center mt-4">
         <h1
           class="text-black md:text-7xl text-4xl font-extrabold text-center tracking-wider p-2 rounded-md md:mt-96 mt-40"
@@ -158,11 +170,7 @@
           ALPHABETS
         </h1>
       </div>
-      <img
-        src="public/image 48.png"
-        alt=""
-        class="h-[700px] w-full "
-      />
+      <img src="public/image 48.png" alt="" class="h-[700px] w-full" />
     </div>
 
     <script src="script/Learnalpha.js"></script>
